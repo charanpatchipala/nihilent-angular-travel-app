@@ -199,7 +199,9 @@
   class="edit-place-form"
 >
   <marquee><h1>Edit Place Data</h1></marquee>
-  <mat-slide-toggle>popular</mat-slide-toggle>
+  <mat-slide-toggle formControlName="popular"
+    ><mat-label>Popular</mat-label></mat-slide-toggle
+  >
   <mat-form-field>
     <mat-label>Destination</mat-label>
     <input matInput formControlName="destination" placeholder="Ex. Paris" />

@@ -29,6 +29,7 @@ import {
   MatChipEditedEvent,
 } from '@angular/material/chips';
 import { EditplaceComponent } from './editplace/editplace.component';
+import { PlacedetailComponent } from './placedetail/placedetail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { EditplaceComponent } from './editplace/editplace.component';
     HomeComponent,
     AddplaceComponent,
     EditplaceComponent,
+    PlacedetailComponent,
   ],
   imports: [
     BrowserModule,

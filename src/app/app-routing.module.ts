@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PlaceListComponent } from './place-list/place-list.component';
 import { AddplaceComponent } from './addplace/addplace.component';
 import { EditplaceComponent } from './editplace/editplace.component';
+import { PlacedetailComponent } from './placedetail/placedetail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'travels', component: PlaceListComponent, pathMatch: 'full' },
   { path: 'add', component: AddplaceComponent },
   { path: 'edit/:id', component: EditplaceComponent },
+  { path: 'travels/:id', component: PlacedetailComponent },
 ];
 
 @NgModule({

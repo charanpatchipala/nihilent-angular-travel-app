@@ -1,0 +1,45 @@
+<!-- <h1>movie id is {{ id }}</h1> -->
+<div class="placevlogcard">
+  <iframe
+    width="674"
+    height="379"
+    src="https://www.youtube.com/embed/oz45k8EYblk"
+    title="Paris | Travel Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+
+  <!-- <img src="{{ movie.trailer }}" alt="Movie-poster" class="poster" /> -->
+  <div class="placecontent">
+    <div class="pname">
+      <span class="name">{{ place.destination }}</span>
+
+      <button
+        (click)="toggledescription()"
+        mat-icon-button
+        aria-label="Expand Less"
+      >
+        <mat-icon *ngIf="show; else moreIcon">expand_less</mat-icon>
+        <ng-template #moreIcon>
+          <mat-icon>expand_more</mat-icon>
+        </ng-template>
+      </button>
+
+      <span class="name">⭐{{ place.rating }}</span>
+    </div>
+    <p *ngIf="show" class="content">{{ place.description }}</p>
+    <div class="place-detail">
+      <em
+        ><strong>Best time to visit:</strong
+        >{{ place?.date | date : "MMM YYYY" }}</em
+      >
+      <span class="name"
+        ><strong>Activities:</strong>{{ place.activities }}</span
+      >
+      <span class="name"
+        ><strong>Suggestions:</strong>{{ place.suggestions }}</span
+      >
+    </div>
+  </div>
+</div>
